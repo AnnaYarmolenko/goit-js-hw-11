@@ -1,0 +1,46 @@
+.hidden {
+  display: none !important; /* Сховати елемент */
+}
+
+.loader {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  display: block;
+  color: black;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #ff3d00;
+  animation: push 1s infinite linear alternate;
+}
+.loader:after {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  background: #607fc1;
+  animation-direction: alternate-reverse;
+}
+@keyframes push {
+  0% {
+    width: 14px;
+    height: 14px;
+  }
+  100% {
+    width: 84px;
+    height: 84px;
+  }
+}
